@@ -957,7 +957,7 @@ lvim.lang = {
       provider = "rust_analyzer",
       setup = {
         cmd = {
-          DATA_PATH .. "/lspinstall/rust/rust-analyzer",
+          "/home/goyox86/Code/rust/rust-analyzer/target/release/rust-analyzer",
         },
         on_attach = common_on_attach,
         on_init = common_on_init,
