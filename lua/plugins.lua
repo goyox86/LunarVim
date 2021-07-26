@@ -230,4 +230,9 @@ return {
     end,
     disable = not lvim.builtin.terminal.active,
   },
+
+  -- base16 colors
+  {
+    "chriskempson/base16-vim",
+  },
 }
