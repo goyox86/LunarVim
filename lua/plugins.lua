@@ -231,9 +231,14 @@ return {
     end,
     disable = not lvim.builtin.terminal.active,
   },
-
   -- base16 colors
   {
     "chriskempson/base16-vim",
+  },
+  -- Signatures help
+  {
+    "ray-x/lsp_signature.nvim",
+    config = function() require"lsp_signature".on_attach() end,
+    event = "InsertEnter"
   },
 }
