@@ -928,6 +928,19 @@ lvim.lang = {
         on_attach = common_on_attach,
         on_init = common_on_init,
         capabilities = common_capabilities,
+        filetypes = { "ruby" },
+        init_options = {
+          formatting = true,
+        },
+        root_dir = function(fname)
+          local util = require("lspconfig").util
+          return util.root_pattern("Gemfile", ".git")(fname)
+        end,
+        settings = {
+          solargraph = {
+            diagnostics = true,
+          },
+        },
       },
     },
   },
